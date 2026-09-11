@@ -1,0 +1,42 @@
+// Analizador léxico funcional para el IMP básico de Winskel.
+// Conserva los nombres de token: serán la interfaz con el parser.
+
+// Palabras reservadas de IMP. La prioridad evita que se clasifiquen como LOC.
+TRUE.2: /true(?![A-Za-z0-9])/
+FALSE.2: /false(?![A-Za-z0-9])/
+SKIP.2: /skip(?![A-Za-z0-9])/
+IF.2: /if(?![A-Za-z0-9])/
+THEN.2: /then(?![A-Za-z0-9])/
+ELSE.2: /else(?![A-Za-z0-9])/
+WHILE.2: /while(?![A-Za-z0-9])/
+DO.2: /do(?![A-Za-z0-9])/
+
+// Datos de IMP.
+NUM: /[0-9]+/
+LOC: /[A-Za-z]+[0-9]*/
+
+// Operadores y delimitadores de IMP.
+ASSIGN: ":="
+LE: "<="
+AND: "&&"
+OR: "||"
+PLUS: "+"
+MINUS: "-"
+TIMES: "*"
+EQ: "="
+NOT: "!"
+SEMI: ";"
+LPAR: "("
+RPAR: ")"
+
+// TODO 1: amplía LOC para admitir letras, dígitos y guion bajo después
+// de la primera letra. Ajusta también el límite de las palabras reservadas.
+
+// TODO 2: agrega COMMENT para // hasta el fin de la línea e ignóralo.
+
+// TODO 3: agrega INT, BOOL, PRINT y FOR como palabras reservadas.
+
+// TODO 4: agrega LBRACE, RBRACE, INC y DEC.
+
+%import common.WS
+%ignore WS

@@ -1,0 +1,6 @@
+int contador_1 := 0;
+bool activo := true;
+
+for (contador_1 := 0; contador_1 <= 3; contador_1++) {
+    print(contador_1); // Muestra el valor actual.
+}
