@@ -4,7 +4,7 @@
 
 ### Fecha de entrega: viernes 11 de septiembre de 2026
 
-Deben completar las reglas léxicas faltantes de [imp.lark](src/imp.lark) para extender el analizador de IMP a IMP++, conservando el reconocimiento de IMP básico. Deberán ampliar los identificadores y agregar comentarios, palabras reservadas, llaves y operadores de incremento y decremento, según los pendientes indicados en el archivo.
+Deben completar las reglas léxicas faltantes de [lexico.lark](src/lexico.lark) para extender el analizador de IMP a IMP++, conservando el reconocimiento de IMP básico. Deberán ampliar los identificadores y agregar comentarios, palabras reservadas, llaves y operadores de incremento y decremento, según los pendientes indicados en el archivo.
 
 Para consultar las construcciones del lenguaje base, pueden revisar [la descripción de IMP](docs/descripcion_imp.pdf).
 
@@ -12,7 +12,7 @@ El analizador proporcionado conserva los mismos módulos e interfaz de IMP01: pr
 
 El único archivo que deben modificar es:
 
-- [`imp.lark`](src/imp.lark) con la especificación léxica de IMP++.
+- [`lexico.lark`](src/lexico.lark) con la especificación léxica de IMP++.
 
 *No deben modificar de ninguna manera ninguno de los otros archivos ni estructura de la práctica ni repositorio.*
 
@@ -70,7 +70,7 @@ $ python -m unittest -v
 
 Este comando ejecuta el conjunto de pruebas definido para la práctica. Las pruebas de IMP básico pasan desde el inicio; las de IMP++ fallarán hasta que completen la extensión.
 
-Todas las pruebas deberán pasar sin errores ni pruebas omitidas. Si alguna falla, corrijan `src/imp.lark` y ejecuten nuevamente las pruebas.
+Todas las pruebas deberán pasar sin errores ni pruebas omitidas. Si alguna falla, corrijan `src/lexico.lark` y ejecuten nuevamente las pruebas.
 
 ### Archivos de la práctica
 

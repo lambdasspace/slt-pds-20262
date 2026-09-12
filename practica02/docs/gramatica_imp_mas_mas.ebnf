@@ -1,0 +1,34 @@
+(* Gramática requerida para la práctica 2: IMP++.
+   * significa cero o más repeticiones; + significa una o más.
+   NUM y LOC son los tokens definidos en la práctica 1.
+   Los comentarios // y los espacios se ignoran en regex.lark.
+   Toda operación lleva paréntesis. Las llaves delimitan los bloques.
+   Las declaraciones van antes de las sentencias de su programa o bloque.
+   La comprobación de tipos no forma parte de esta práctica. *)
+
+programa      ::= declaracion* sentencia+
+
+declaracion   ::= tipo LOC ":=" expresion ";"
+tipo          ::= "int" | "bool"
+
+sentencia     ::= "skip" ";"
+                | asignacion ";"
+                | LOC "++" ";"
+                | LOC "--" ";"
+                | "print" "(" expresion ")" ";"
+                | "if" expresion "then" bloque "else" bloque
+                | "while" expresion "do" bloque
+                | "for" "(" asignacion ";" expresion ";" actualizacion ")" bloque
+                | bloque
+
+bloque        ::= "{" declaracion* sentencia* "}"
+
+asignacion    ::= LOC ":=" expresion
+actualizacion ::= asignacion | LOC "++" | LOC "--"
+
+expresion     ::= NUM | "true" | "false" | LOC
+                | "(" expresion ")"
+                | "(" operacion ")"
+operacion     ::= expresion op_binario expresion | op_unario expresion
+op_binario    ::= "+" | "-" | "*" | "=" | "<=" | "&&" | "||"
+op_unario     ::= "!" | "-"

@@ -7,6 +7,9 @@
 * [Práctica 1: Extensión del analizador léxico para IMP++](practica01)   
   Entrega: 11 de septiembre de 2026
 
+* [Práctica 2: Extensión del analizador sintáctico para IMP++](practica02)   
+  Entrega: 8 de octubre de 2026
+
 ### Formato de entrega
 
 Las prácticas estarán disponibles en este repositorio. Para trabajar y entregar las prácticas deberán seguir el procedimiento que corresponda.

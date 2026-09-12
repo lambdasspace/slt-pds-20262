@@ -1,4 +1,4 @@
-"""Analizador léxico guiado por la especificación local imp.lark."""
+"""Analizador léxico guiado por la especificación local lexico.lark."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ else:
     from tabla_simbolos import TablaSimbolos
 
 
-RUTA_GRAMATICA = Path(__file__).with_name("imp.lark")
+RUTA_GRAMATICA = Path(__file__).with_name("lexico.lark")
 
 
 @dataclass
