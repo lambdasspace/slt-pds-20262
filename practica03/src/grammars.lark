@@ -1,0 +1,46 @@
+// Gramática inicial de IMP. Completa su extensión a IMP++.
+// Consulta ../docs/gramatica_imp_mas_mas.ebnf y el README de la práctica.
+// Los tokens los proporciona regex.lark, recuperado de la práctica 1.
+%declare NUM LOC TRUE FALSE SKIP IF THEN ELSE WHILE DO
+%declare PLUS MINUS TIMES EQ LE NOT AND OR ASSIGN SEMI LPAR RPAR
+%declare LBRACE RBRACE
+
+// Aquí va tu código: declara los tokens adicionales de IMP++.
+
+// Aquí va tu código: adapta programa para admitir declaraciones y sentencias.
+programa: comando
+
+// Aquí va tu código: extiende los comandos según la EBNF de IMP++.
+// En IMP++ las instrucciones simples terminan en SEMI.
+?comando: SKIP -> omitir
+        | LOC ASSIGN aritmetica -> asignacion
+        | comando SEMI comando -> secuencia
+        | IF booleana THEN bloque ELSE bloque -> condicional
+        | WHILE booleana DO bloque -> mientras
+
+// Aquí va tu código: un bloque de IMP++ admite declaraciones y sentencias,
+// incluso un bloque vacío. Las llaves siguen delimitando los cuerpos.
+bloque: LBRACE comando RBRACE
+
+// Aquí va tu código: adapta estas expresiones a la regla expresion de IMP++.
+// Conserva los paréntesis de cada operación y los alias de sus nodos.
+?aritmetica: NUM -> numero
+           | LOC -> variable
+           | LPAR aritmetica PLUS aritmetica RPAR -> suma
+           | LPAR aritmetica MINUS aritmetica RPAR -> resta
+           | LPAR aritmetica TIMES aritmetica RPAR -> multiplicacion
+           | LPAR aritmetica RPAR -> parentesis
+
+?booleana: TRUE -> verdadero
+         | FALSE -> falso
+         | LPAR aritmetica EQ aritmetica RPAR -> igualdad
+         | LPAR aritmetica LE aritmetica RPAR -> menor_igual
+         | LPAR NOT booleana RPAR -> negacion
+         | LPAR booleana AND booleana RPAR -> conjuncion
+         | LPAR booleana OR booleana RPAR -> disyuncion
+         | LPAR booleana RPAR -> parentesis
+
+// Aquí va tu código: agrega declaracion, tipo, asignacion, actualizacion,
+// impresion, incremento, decremento y ciclo_for según la EBNF.
+// Usa tipo_int y tipo_bool para los tipos, y negativo para el menos unario.
+// Conserva los nombres y alias de los casos de construye_nodo en parser.py.

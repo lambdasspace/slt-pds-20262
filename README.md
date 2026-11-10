@@ -8,7 +8,10 @@
   Entrega: 11 de septiembre de 2026
 
 * [Práctica 2: Extensión del analizador sintáctico para IMP++](practica02)   
-  Entrega: 8 de octubre de 2026
+  Entrega: 23 de octubre de 2026
+
+* [Práctica 3: Verificador de tipos para IMP++](practica03)
+  Entrega: 16 de noviembre de 2026
 
 ### Formato de entrega
 
