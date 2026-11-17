@@ -1,0 +1,6 @@
+int contador := 0;
+bool activo := true;
+contador := activo;
+while contador do {
+    print(activo);
+}

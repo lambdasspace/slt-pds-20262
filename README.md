@@ -2,7 +2,7 @@
 
 ## Semestre 2026-2
 
-### Prácticas
+### Prácticas — modalidad GitHub
 
 * [Práctica 1: Extensión del analizador léxico para IMP++](practica01)   
   Entrega: 11 de septiembre de 2026
@@ -13,9 +13,14 @@
 * [Práctica 3: Verificador de tipos para IMP++](practica03)   
   Entrega: 16 de noviembre de 2026
 
+* [Práctica 4: Generación de código C para IMP++ e integración](practica04)   
+  Entrega: 11 de diciembre de 2026
+
 ### Formato de entrega
 
-Las prácticas estarán disponibles en este repositorio. Para trabajar y entregar las prácticas deberán seguir el procedimiento que corresponda.
+Las prácticas de esta carpeta se trabajan y entregan mediante un repositorio
+privado de GitHub. Para trabajar y entregar deberán seguir el procedimiento que
+corresponda.
 
 ## Configuración inicial: sólo la primera vez
 
